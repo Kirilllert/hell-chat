@@ -1,0 +1,16 @@
+.input{
+	padding:0px 15px 15px 0px;
+}
+.container_input{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button{
+	color: #B14648;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.masseng{
+	text-align: center;
+}

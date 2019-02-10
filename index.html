@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hell Chatt</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+	<div class="masseng" id="masseng">
+	
+	</div>
+	<div class="container_input">
+		<input id="input" class="input" type="" placeholder="Введите сообщение..." name="">
+		<div class="button" id="button">
+			<i class="fas fa-share-square"></i>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let input = document.getElementById('input');
+		let btn = document.getElementById('button');
+		let masseng = document.getElementById('masseng');
+
+		btn.onclick = function(){
+			let massenger = document.createElement('text');
+			massenger.textContent = input.value;
+			masseng.appendChild(massenger);
+		}
+	</script>
+</body>
+</html>
