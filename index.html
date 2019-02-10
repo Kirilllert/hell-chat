@@ -10,6 +10,7 @@
 	
 	</div>
 	<div class="container_input">
+		<input id="input_nick" type="" name="" placeholder="Ваш ник">
 		<input id="input" class="input" type="" placeholder="Введите сообщение..." name="">
 		<div class="button" id="button">
 			<i class="fas fa-share-square"></i>
@@ -19,11 +20,14 @@
 		let input = document.getElementById('input');
 		let btn = document.getElementById('button');
 		let masseng = document.getElementById('masseng');
+		let inputNick = document.getElementById('input_nick')
 
 		btn.onclick = function(){
 			let massenger = document.createElement('text');
+			let name = inputNick.value;
 			massenger.textContent = input.value;
 			masseng.appendChild(massenger);
+			masseng.appendChild(name);
 		}
 	</script>
 </body>
