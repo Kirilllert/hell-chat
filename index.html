@@ -4,30 +4,52 @@
 	<title>Hell Chatt</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
-	<div class="masseng" id="masseng">
-	
-	</div>
-	<div class="container_input">
-		<input id="input_nick" type="" name="" placeholder="Ваш ник">
-		<input id="input" class="input" type="" placeholder="Введите сообщение..." name="">
-		<div class="button" id="button">
-			<i class="fas fa-share-square"></i>
+	<div id="button_container" class="button_container">
+		<div id="button_container" class="start_button">
+			Start
 		</div>
 	</div>
+		<div id="massenger_chat" class="massenger_chat">
+			<div class="mas" id="mas">
+			<div class="masseng " id="masseng"> 
+
+			</div>
+			</div>
+			<div class="container_input">
+				<input id="input" class="input" type="" placeholder="Введите сообщение..." name="">
+				<div class="button" id="button">
+				<i class="fas fa-share-square"></i>
+				</div>
+			</div>
+		</div>
 	<script type="text/javascript">
 		let input = document.getElementById('input');
 		let btn = document.getElementById('button');
+		let mas = document.getElementById('mas');
 		let masseng = document.getElementById('masseng');
-		let inputNick = document.getElementById('input_nick')
+		let btnCon = document.getElementById('button_container');
+		let startButton = document.getElementById('start_button');
+		let massengerChat = document.getElementById('massenger_chat');
 
+		btnCon.onclick = function(){
+			let login = prompt('Введите логин');
+			var nick = prompt('Введите Ник-Нейм');
+			if (login === 'chat_start') {
+				massengerChat.classList.toggle('active');
+				btnCon.classList.toggle("none-active");
+			}
+		}
 		btn.onclick = function(){
 			let massenger = document.createElement('text');
-			let name = inputNick.value;
 			massenger.textContent = input.value;
-			masseng.appendChild(massenger);
-			masseng.appendChild(name);
+			name.textContent = nick.textContent;
+			mas.appendChild(massenger);
+			mas.appendChild(name);
 		}
 	</script>
 </body>

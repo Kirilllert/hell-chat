@@ -11,6 +11,38 @@
 	margin-left: 5px;
 	cursor: pointer;
 }
-.masseng{
+.mas{
 	text-align: center;
+
 }
+.masseng{
+	display: inline-block;
+
+}
+.nick{
+	color: #E7F1F6;
+	display: block;
+}
+.massenger_chat{
+	display: none;
+}
+.start_button{
+			padding: 5px 10px 5px 10px;
+			background-color: #B14648;
+			border-radius: 5px;
+			border-color: #B14648;
+			color: white;
+			display: inline-block;
+			font-family: 'Montserrat', sans-serif;
+
+		}
+		.button_container{
+			text-align: center;
+			cursor: pointer;
+		}
+		.active{
+			display: inline-block !important;
+		}
+		.none-active{
+			display: none !important;
+		}
