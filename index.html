@@ -35,6 +35,7 @@
 		let btnCon = document.getElementById('button_container');
 		let startButton = document.getElementById('start_button');
 		let massengerChat = document.getElementById('massenger_chat');
+		let nick;
 
 		btnCon.onclick = function(){
 			let login = prompt('Введите логин');
@@ -46,10 +47,11 @@
 		}
 		btn.onclick = function(){
 			let massenger = document.createElement('text');
+			let name = document.createElement('text');
+			name.textContent = nick;
 			massenger.textContent = input.value;
-			name.textContent = nick.textContent;
 			mas.appendChild(massenger);
-			mas.appendChild(name);
+			masseng.appendChild(name);
 		}
 	</script>
 </body>
