@@ -14,11 +14,11 @@
 			Start
 		</div>
 	</div>
-		<div id="massenger_chat" class="massenger_chat">
-			<div class="mas" id="mas">
+			<div id="massenger_chat" class="massenger_chat">
+			<div class="nickname" id="nickname"></div>
+			<div class="mas" id="mas"></div>
 			<div class="masseng " id="masseng"> 
 
-			</div>
 			</div>
 			<div class="container_input">
 				<input id="input" class="input" type="" placeholder="Введите сообщение..." name="">
@@ -36,10 +36,11 @@
 		let startButton = document.getElementById('start_button');
 		let massengerChat = document.getElementById('massenger_chat');
 		let nick;
-
+		let nickname = document.getElementById('nickname');
 		btnCon.onclick = function(){
 			let login = prompt('Введите логин');
-			var nick = prompt('Введите Ник-Нейм');
+			 nick = prompt('Введите Ник-Нейм');
+			 photo = prompt('Загрузите аватарку');
 			if (login === 'chat_start') {
 				massengerChat.classList.toggle('active');
 				btnCon.classList.toggle("none-active");
@@ -51,7 +52,9 @@
 			name.textContent = nick;
 			massenger.textContent = input.value;
 			mas.appendChild(massenger);
-			masseng.appendChild(name);
+			nickname.appendChild(name);
+			name.classList.toggle('nickname');
+
 		}
 	</script>
 </body>

@@ -25,6 +25,7 @@
 }
 .massenger_chat{
 	display: none;
+	
 }
 .start_button{
 			padding: 5px 10px 5px 10px;
@@ -46,3 +47,7 @@
 		.none-active{
 			display: none !important;
 		}
+		.nickname{
+			color: #3A5A75;
+		}
+		
