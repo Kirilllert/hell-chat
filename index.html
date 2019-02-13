@@ -17,10 +17,11 @@
 	</div>
 			<div class="super_container">
 			<div id="massenger_chat" class="massenger_chat">
-			<div class="nickname" id="nickname"></div>
-			<div class="mas" id="mas"></div>
-			<div class="masseng " id="masseng"> 
-
+			<div class="big_container_massenger" id=" big_container_massenger">
+				<div class="nickname" id="nickname"></div>
+				<div class="mas" id="mas"></div>
+				<div class="masseng " id="masseng"> 
+				</div>
 			</div>
 			<div class="container_input">
 				<input id="input" class="input" type="" placeholder="Введите сообщение..." name="">
@@ -40,6 +41,7 @@
 		let massengerChat = document.getElementById('massenger_chat');
 		let nick;
 		let nickname = document.getElementById('nickname');
+		let bigContainerMassenger = document.getElementById('big_container_massenger')
 		btnCon.onclick = function(){
 			let login = prompt('Введите логин');
 			 nick = prompt('Введите Ник-Нейм');
@@ -56,25 +58,13 @@
 			let name = document.createElement('text');
 			name.textContent = nick;
 			massenger.textContent = input.value;
-			mas.appendChild(massenger);
-			nickname.appendChild(name);
+			bigContainerMassenger/mas.appendChild(massenger);
+			bigContainerMassenger/nickname.appendChild(name);
 			name.classList.toggle('nickname');
 			massenger.classList.add('SMS');
-			for (var i =1; i < btn.length;i++) {
-				btn[i].onclick = function(){
-					let massenger = document.createElement('text');
-			let name = document.createElement('text');
-			name.textContent = nick;
-			massenger.textContent = input.value;
-			mas.appendChild(massenger);
-			mas.appendChild(name);
-
-			name.classList.toggle('nickname');
-			massenger.classList.add('SMS');
-				}
+			
 			}
 
-		}
 	</script>
 </body>
 </html>
