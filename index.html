@@ -47,6 +47,8 @@
 			if (login === 'chat_start') {
 				massengerChat.classList.toggle('active');
 				btnCon.classList.toggle("none-active");
+			} else if (login === 'admin_kirill'){
+
 			}
 		}
 		btn.onclick = function(){
@@ -57,7 +59,20 @@
 			mas.appendChild(massenger);
 			nickname.appendChild(name);
 			name.classList.toggle('nickname');
-			massenger.classList.add('SMS')
+			massenger.classList.add('SMS');
+			for (var i =1; i < btn.length;i++) {
+				btn[i].onclick = function(){
+					let massenger = document.createElement('text');
+			let name = document.createElement('text');
+			name.textContent = nick;
+			massenger.textContent = input.value;
+			mas.appendChild(massenger);
+			mas.appendChild(name);
+
+			name.classList.toggle('nickname');
+			massenger.classList.add('SMS');
+				}
+			}
 
 		}
 	</script>
