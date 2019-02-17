@@ -17,7 +17,7 @@
 	</div>
 			<div class="super_container">
 			<div id="massenger_chat" class="massenger_chat">
-			<div class="big_container_massenger" id=" big_container_massenger">
+			<div class="big_container_massenger" id="big_container_massenger">
 				<div class="nickname" id="nickname"></div>
 				<div class="mas" id="mas"></div>
 				<div class="masseng " id="masseng"> 
@@ -41,7 +41,7 @@
 		let massengerChat = document.getElementById('massenger_chat');
 		let nick;
 		let nickname = document.getElementById('nickname');
-		let bigContainerMassenger = document.getElementById('big_container_massenger')
+
 		btnCon.onclick = function(){
 			let login = prompt('Введите логин');
 			 nick = prompt('Введите Ник-Нейм');
@@ -54,14 +54,19 @@
 			}
 		}
 		btn.onclick = function(){
+			let bigContainerMassenger = document.getElementById('big_container_massenger')
 			let massenger = document.createElement('text');
 			let name = document.createElement('text');
+			let superMasenger = document.createElement('div');
 			name.textContent = nick;
 			massenger.textContent = input.value;
 			bigContainerMassenger/mas.appendChild(massenger);
 			bigContainerMassenger/nickname.appendChild(name);
 			name.classList.toggle('nickname');
 			massenger.classList.add('SMS');
+			superMasenger.appendChild(name);
+			superMasenger.appendChild(massenger);
+			bigContainerMassenger.appendChild(superMasenger);
 			
 			}
 
