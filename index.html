@@ -41,14 +41,14 @@
 		let startButton = document.getElementById('start_button');
 		let massengerChat = document.getElementById('massenger_chat');
 		let nick;
-		let avatar;
+		//let avatar;
 		let nickname = document.getElementById('nickname');
 		let avatarConteiner = document.getElementById('avatar_conteiner');
 
 		btnCon.onclick = function(){
 			let login = prompt('Введите логин');
 			 nick = prompt('Введите Ник-Нейм');
-			 avatar = prompt('Вставти ссылку фотографии')
+			 //avatar = prompt('Вставти ссылку фотографии')
 			
 			if (login === 'chat_start') {
 				massengerChat.classList.toggle('active');
@@ -62,18 +62,18 @@
 			let massenger = document.createElement('text');
 			let name = document.createElement('text');
 			let superMasenger = document.createElement('div');
-			let avatarka = document.createElement('img');
-			img.src = avatar;
+			//let avatarka = document.createElement('img');
+			//img.src = avatar;
 			name.textContent = nick;
 			massenger.textContent = input.value;
 			bigContainerMassenger/mas.appendChild(massenger);
 			bigContainerMassenger/nickname.appendChild(name);
-			bigContainerMassenger/nickname.appendChild(avatarka);
+			//bigContainerMassenger/nickname.appendChild(avatarka);
 			name.classList.toggle('nickname');
 			massenger.classList.add('SMS');
 			superMasenger.appendChild(name);
 			superMasenger.appendChild(massenger);
-			superMasenger.appendChild(avatarka);
+			//superMasenger.appendChild(avatarka);
 			bigContainerMassenger.appendChild(superMasenger);
 			
 			}
