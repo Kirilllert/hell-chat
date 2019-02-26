@@ -8,6 +8,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="button_container" class="button_container">
@@ -18,10 +22,17 @@
 			<div class="super_container">
 			<div id="massenger_chat" class="massenger_chat">
 			<div class="big_container_massenger" id="big_container_massenger">
-				<div class="nickname" id="nickname"></div>
 				<div class="avatar" id="avatar_conteiner"></div>
+				<div class="nickname" id="nickname"></div>
 				<div class="mas" id="mas"></div>
 				<div class="masseng " id="masseng"> 
+				</div>
+			</div>
+			//<div id="answer_bot" class="answer_bot">
+				<div class="avatar_bot" id="avatar_conteiner-bot"></div>
+				<div class="nickname-bot" id="nickname-bot"></div>
+				<div class="mas-bot" id="mas"></div>
+				<div class="masseng-bot" id="masseng"> 
 				</div>
 			</div>
 			<div class="container_input">
@@ -41,43 +52,60 @@
 		let startButton = document.getElementById('start_button');
 		let massengerChat = document.getElementById('massenger_chat');
 		let nick;
-		//var avatar;
+		var avatar;
+		//var botImg;
 		let nickname = document.getElementById('nickname');
 		let avatarConteiner = document.getElementById('avatar_conteiner');
-
+		let answer_bot = document.getElementById('answer_bot');
+		let avatar_bot = document.getElementById('avatar_bot');
+		
 		btnCon.onclick = function(){
 			let login = prompt('Введите логин');
 			 nick = prompt('Введите Ник-Нейм');
-			// avatar = prompt('Вставти ссылку фотографии')
+			avatar = prompt('Вставти ссылку фотографии');
+			//botImg = prompt('Вставти фото бота');
 			
 			if (login === 'chat_start') {
 				massengerChat.classList.toggle('active');
 				btnCon.classList.toggle("none-active");
 			} else if (login === 'admin_kirill'){
-
 			}
 		}
 		btn.onclick = function(){
-			let bigContainerMassenger = document.getElementById('big_container_massenger')
+			let bigContainerMassenger = document.getElementById('big_container_massenger');
+			//let massive_massanger = ['Привет!Как твои делишки?','У меня все хорошо',];
+			let avatarka = document.createElement('img');
+			avatarka.src = avatar;
 			let massenger = document.createElement('text');
 			let name = document.createElement('text');
 			let superMasenger = document.createElement('div');
-			//let avatarka = document.createElement('img');
-			//img.src = avatar;
 			name.textContent = nick;
 			massenger.textContent = input.value;
+			bigContainerMassenger/nickname.appendChild(avatarka);
 			bigContainerMassenger/mas.appendChild(massenger);
 			bigContainerMassenger/nickname.appendChild(name);
-			//bigContainerMassenger/nickname.appendChild(avatarka);
 			name.classList.toggle('nickname');
 			massenger.classList.add('SMS');
+			superMasenger.appendChild(avatarka);
 			superMasenger.appendChild(name);
 			superMasenger.appendChild(massenger);
-			//superMasenger.appendChild(avatarka);
 			bigContainerMassenger.appendChild(superMasenger);
-			
+			avatarka.classList.add('ava');
+			//let answerBot = document.getElementById('answer_bot');
+			//let photoBot = document.createElement('img');
+			//photoBot.src = botImg;
+			//let massenger_bot = document.createElement('text');
+			//massenger_bot = massive_massanger[Math.floor(Math.random()*massive_massanger.length)];
+			//let name_bot = document.createElement('text');
+			//name_bot.textContent = 'Kirill';
+			//bigContainerMassenger/nickname.appendChild(photoBot);
+			//bigContainerMassenger/mas.appendChild(massenger_bot);
+			//bigContainerMassenger/nickname.appendChild(name_bot);
+			//superMasenger.appendChild(photoBot);
+			//superMasenger.appendChild(name_not);
+			//superMasenger.appendChild(massenger_bot);
+			//bigContainerMassenger.appendChild(superMasenger);
 			}
-
 	</script>
 </body>
 </html>
