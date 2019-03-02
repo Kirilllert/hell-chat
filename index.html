@@ -53,7 +53,7 @@
 		let massengerChat = document.getElementById('massenger_chat');
 		let nick;
 		var avatar;
-		//var botImg;
+		var botImg;
 		let nickname = document.getElementById('nickname');
 		let avatarConteiner = document.getElementById('avatar_conteiner');
 		let answer_bot = document.getElementById('answer_bot');
@@ -63,7 +63,7 @@
 			let login = prompt('Введите логин');
 			 nick = prompt('Введите Ник-Нейм');
 			avatar = prompt('Вставти ссылку фотографии');
-			//botImg = prompt('Вставти фото бота');
+			botImg = prompt('Вставти фото бота');
 			
 			if (login === 'chat_start') {
 				massengerChat.classList.toggle('active');
@@ -73,7 +73,7 @@
 		}
 		btn.onclick = function(){
 			let bigContainerMassenger = document.getElementById('big_container_massenger');
-			//let massive_massanger = ['Привет!Как твои делишки?','У меня все хорошо',];
+			let massive_massanger = ['Привет!Как твои делишки?','У меня все хорошо',];
 			let avatarka = document.createElement('img');
 			avatarka.src = avatar;
 			let massenger = document.createElement('text');
@@ -91,21 +91,21 @@
 			superMasenger.appendChild(massenger);
 			bigContainerMassenger.appendChild(superMasenger);
 			avatarka.classList.add('ava');
-			//avatarka.classList.add('ava');
-			//let answerBot = document.getElementById('answer_bot');
-			//let photoBot = document.createElement('img');
-			//photoBot.src = botImg;
-			//let massenger_bot = document.createElement('text');
-			//massenger_bot = massive_massanger[Math.floor(Math.random()*massive_massanger.length)];
-			//let name_bot = document.createElement('text');
-			//name_bot.textContent = 'Kirill';
-			//bigContainerMassenger/nickname.appendChild(photoBot);
-			//bigContainerMassenger/mas.appendChild(massenger_bot);
-			//bigContainerMassenger/nickname.appendChild(name_bot);
-			//superMasenger.appendChild(photoBot);
-			//superMasenger.appendChild(name_not);
-			//superMasenger.appendChild(massenger_bot);
-			//bigContainerMassenger.appendChild(superMasenger);
+			avatarka.classList.add('ava');
+			let answerBot = document.getElementById('answer_bot');
+			let photoBot = document.createElement('img');
+			photoBot.src = botImg;
+			let massenger_bot = document.createElement('text');
+			massenger_bot = massive_massanger[Math.floor(Math.random()*massive_massanger.length)];
+			let name_bot = document.createElement('text');
+			name_bot.textContent = 'Kirill';
+			bigContainerMassenger/nickname.appendChild(photoBot);
+			bigContainerMassenger/mas.appendChild(massenger_bot);
+			bigContainerMassenger/nickname.appendChild(name_bot);
+			superMasenger.appendChild(photoBot);
+			superMasenger.appendChild(name_not);
+			superMasenger.appendChild(massenger_bot);
+			bigContainerMassenger.appendChild(superMasenger);
 			}
 	</script>
 </body>
