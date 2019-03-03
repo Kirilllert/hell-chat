@@ -29,7 +29,7 @@
 				<div class="masseng " id="masseng"> 
 				</div>
 			</div>
-			//<div id="answer_bot" class="answer_bot">
+			<div id="answer_bot" class="answer_bot">
 				<div class="avatar_bot" id="avatar_conteiner-bot"></div>
 				<div class="nickname-bot" id="nickname-bot"></div>
 				<div class="mas-bot" id="mas"></div>
@@ -60,9 +60,10 @@
 		let answer_bot = document.getElementById('answer_bot');
 		let avatar_bot = document.getElementById('avatar_bot');
 
-		btnCon.onclick = function(){
+
+		btnCon.onclick = function () {
 			let login = prompt('Введите логин');
-			 nick = prompt('Введите Ник-Нейм');
+			nick = prompt('Введите Ник-Нейм');
 			avatar = prompt('Вставти ссылку фотографии');
 			botImg = prompt('Вставти фото бота');
 			
@@ -70,11 +71,12 @@
 				massengerChat.classList.toggle('active');
 				btnCon.classList.toggle("none-active");
 			} else if (login === 'admin_kirill'){
+
 			}
 		}
 		btn.onclick = function(){
 			let bigContainerMassenger = document.getElementById('big_container_massenger');
-			let massive_massanger = ['Привет!Как твои делишки?','У меня все хорошо',];
+			let massive_massanger = ['Привет!Как твои делишки?','У меня все хорошо','Не,ну это адская магия','ЛЯ-ЛЯ-ЛЯ','Люблю мемы про круглые лица и адскую магию','Спасибо','Пока','весело живем','Бекини герлс'];
 			let avatarka = document.createElement('img');
 			avatarka.src = avatar;
 			let massenger = document.createElement('text');
@@ -101,12 +103,16 @@
 			let name_bot = document.createElement('text');
 			name_bot.textContent = 'Kirill';
 			bigContainerMassenger/nickname.appendChild(photoBot);
-			bigContainerMassenger/mas.appendChild(massenger_bot);
+			let botMg = document.createTextNode(massenger_bot);
+			answerBot.appendChild(botMg);
 			bigContainerMassenger/nickname.appendChild(name_bot);
 			superMasenger.appendChild(photoBot);
-			superMasenger.appendChild(name_not);
-			superMasenger.appendChild(massenger_bot);
+			superMasenger.appendChild(name_bot);
+			answerBot.appendChild(botMg);
 			bigContainerMassenger.appendChild(superMasenger);
+			photoBot.classList.toggle('ava_bot');
+			name_bot.classList.toggle('name_bot');
+			answerBot.classList.toggle('sms_bot');
 			}
 	</script>
 </body>

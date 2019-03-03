@@ -75,7 +75,26 @@
 		.big_container_massenger{
 			margin-bottom: 10px;
 		}
+		.answer_bot{
+			display: block;
+		}
 		.ava{
 			width: 50px;
 			border-radius: 30px;
+		}
+		.ava_bot{
+			width: 50px;
+			border-radius: 30px;
+		}
+		.name_bot{
+			color: #B14648;
+			font-size: 30px;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.sms_bot{
+			padding: 10px 100px 15px 10px;
+			margin-top: 5px;
+			background-color: #E6EBF1;
+			display: block;
+			margin-bottom: 15px;
 		}
