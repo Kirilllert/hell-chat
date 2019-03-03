@@ -45,6 +45,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+
 		let input = document.getElementById('input');
 		let btn = document.getElementById('button');
 		let mas = document.getElementById('mas');
@@ -61,7 +62,9 @@
 		let avatar_bot = document.getElementById('avatar_bot');
 
 
+		//При нажатие на кнопку "Start" выскакивает область prompt
 		btnCon.onclick = function () {
+			//Логин = chat_start
 			let login = prompt('Введите логин');
 			nick = prompt('Введите Ник-Нейм');
 			avatar = prompt('Вставти ссылку фотографии');
@@ -70,50 +73,75 @@
 			if (login === 'chat_start') {
 				massengerChat.classList.toggle('active');
 				btnCon.classList.toggle("none-active");
-			} else if (login === 'admin_kirill'){
-
 			}
 		}
-		btn.onclick = function(){
-			let bigContainerMassenger = document.getElementById('big_container_massenger');
-			let massive_massanger = ['Привет!Как твои делишки?','У меня все хорошо','Не,ну это адская магия','ЛЯ-ЛЯ-ЛЯ','Люблю мемы про круглые лица и адскую магию','Спасибо','Пока','весело живем','Бекини герлс'];
+
+		let bigContainerMassenger = document.getElementById('big_container_massenger');
+		let massenger_bot = document.getElementById('massenger_bot');
+		let massive_massanger = ['Привет','Как твои дела?','Это какая-то аская магия','Круглые лица',
+		'Меня зовут Кекс,а тебя?','Я не много глупый,зато очень милый)','Давай поговорим','Вот так и живем'];
+		let superMasenger = document.createElement('div');
+		let photoBot = document.getElementById('avatar_bot');
+
+		//функции все что выполняет user
+
+		function user() {
 			let avatarka = document.createElement('img');
-			avatarka.src = avatar;
 			let massenger = document.createElement('text');
 			let name = document.createElement('text');
 			let superMasenger = document.createElement('div');
+
+			avatarka.src = avatar;
 			name.textContent = nick;
 			massenger.textContent = input.value;
+
 			bigContainerMassenger/nickname.appendChild(avatarka);
 			bigContainerMassenger/mas.appendChild(massenger);
 			bigContainerMassenger/nickname.appendChild(name);
+
 			name.classList.toggle('nickname');
 			massenger.classList.add('SMS');
+
 			superMasenger.appendChild(avatarka);
 			superMasenger.appendChild(name);
 			superMasenger.appendChild(massenger);
 			bigContainerMassenger.appendChild(superMasenger);
+
 			avatarka.classList.add('ava');
 			avatarka.classList.add('ava');
+		}
+
+		//функции для ответа бота
+
+		function bot(){
 			let answerBot = document.getElementById('answer_bot');
 			let photoBot = document.createElement('img');
-			photoBot.src = botImg;
 			let massenger_bot = document.createElement('text');
-			massenger_bot = massive_massanger[Math.floor(Math.random()*massive_massanger.length)];
 			let name_bot = document.createElement('text');
-			name_bot.textContent = 'Kirill';
-			bigContainerMassenger/nickname.appendChild(photoBot);
+
+			massenger_bot = massive_massanger[Math.floor(Math.random()*massive_massanger.length)];
 			let botMg = document.createTextNode(massenger_bot);
+			
 			answerBot.appendChild(botMg);
+			photoBot.src = botImg;
+			name_bot.textContent = 'Кекс';
+
+			bigContainerMassenger/nickname.appendChild(photoBot);
 			bigContainerMassenger/nickname.appendChild(name_bot);
 			superMasenger.appendChild(photoBot);
 			superMasenger.appendChild(name_bot);
 			answerBot.appendChild(botMg);
 			bigContainerMassenger.appendChild(superMasenger);
+			
 			photoBot.classList.toggle('ava_bot');
 			name_bot.classList.toggle('name_bot');
 			answerBot.classList.toggle('sms_bot');
-			}
+		}
+
+		btn.onclick = function() {
+			user();
+			bot();
+		}
 	</script>
 </body>
 </html>
